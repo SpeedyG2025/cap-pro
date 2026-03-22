@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="activities.html">Activités</a></li>
+        <li><a href="appointments.html">Rendez-vous</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="donate.html" class="btn-donate-nav">Faire un don</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-tag">Nous contacter</p>
+      <h1>Entrons en contact</h1>
+      <p>Nous sommes disponibles pour répondre à vos questions, ou pour vous guider vers les services qui correspondent à vos besoins.</p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div>
+          <p class="section-tag" style="margin-bottom:20px">Nos coordonnées</p>
+          <h2 style="margin-bottom:40px">Nous sommes<br/><em>à votre écoute</em></h2>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h5>Adresse</h5>
+                <p>Port-au-Prince, Haïti<br/>Rue de la Résilience, Pétion-Ville</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h5>Téléphone</h5>
+                <p>+509 XXXX XXXX<br/><span style="font-size:.8rem;color:var(--text-lt)">Lun–Ven, 8h–17h</span></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h5>Email</h5>
+                <p>contact@capsy.ht<br/><span style="font-size:.8rem;color:var(--text-lt)">Réponse sous 48h</span></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <h5>Heures d'ouverture</h5>
+                <p>Lundi–Vendredi: 8h00–17h00<br/>Samedi: 9h00–13h00<br/>Dimanche: Fermé</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;padding:28px;background:var(--cream);border-radius:var(--radius-lg)">
+            <h5 style="margin-bottom:12px">Urgence psychologique?</h5>
+            <p style="font-size:.875rem;color:var(--text-md);margin-bottom:16px">Si vous traversez une crise ou avez besoin d'aide immédiate, appelez notre ligne d'urgence disponible 24h/24.</p>
+            <a href="tel:+50900000000" class="btn-primary" style="display:inline-flex">📞 Ligne d'urgence: +509 0000 0000</a>
+          </div>
+
+          <div style="margin-top:24px;padding:24px;border:1px solid var(--border);border-radius:var(--radius-lg)">
+            <h5 style="margin-bottom:14px">Retrouvez-nous sur</h5>
+            <div style="display:flex;gap:16px">
+              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                CAPSY Haiti
+              </a>
+              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                @capsyhaiti
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div class="contact-form-card">
+            <h3 style="margin-bottom:8px">Envoyez-nous un message</h3>
+            <p style="color:var(--text-md);font-size:.875rem;margin-bottom:28px">Toutes les communications sont traitées de façon confidentielle.</p>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Prénom *</label>
+                  <input type="text" placeholder="Votre prénom" required />
+                </div>
+                <div class="form-group">
+                  <label>Nom *</label>
+                  <input type="text" placeholder="Votre nom" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label>Téléphone</label>
+                <input type="tel" placeholder="+509 XXXX XXXX" />
+              </div>
+              <div class="form-group">
+                <label>Sujet</label>
+                <select>
+                  <option>Renseignements généraux</option>
+                  <option>Prise de rendez-vous</option>
+                  <option>Demande de partenariat</option>
+                  <option>Question sur un don</option>
+                  <option>Urgence psychologique</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message *</label>
+                <textarea placeholder="Comment pouvons-nous vous aider?" style="min-height:140px" required></textarea>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px">
+                <input type="checkbox" id="privacy" required style="width:18px;height:18px;margin-top:2px;flex-shrink:0;cursor:pointer" />
+                <label for="privacy" style="font-size:.8rem;color:var(--text-md);cursor:pointer;line-height:1.5">J'accepte que mes informations soient utilisées pour traiter ma demande, en conformité avec la politique de confidentialité de CAPSY.</label>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem">
+                Envoyer le message →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p>Centre d'Appui Psychologique et Social.</p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="activities.html">Activités</a></li><li><a href="appointments.html">Rendez-vous</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul><li><a href="appointments.html">Consultation psychologique</a></li><li><a href="appointments.html">Travail social</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer">❤ Faire un don</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 CAPSY. Tous droits réservés.</p><div class="lang-switcher"><button class="lang-btn active">FR</button><button class="lang-btn">HT</button><button class="lang-btn">EN</button></div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

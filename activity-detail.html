@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail Activité – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="activities.html" class="active">Activités</a></li>
+        <li><a href="appointments.html">Rendez-vous</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-donate-nav">Faire un don</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section-pad" style="padding-top: 120px;">
+    <div class="container">
+      <a href="activities.html" style="display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--teal);margin-bottom:32px;font-weight:500;">← Retour aux activités</a>
+
+      <div class="detail-grid" id="detailContent">
+        <!-- Loaded by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Activities -->
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">À découvrir</p>
+        <h2>Autres activités</h2>
+      </div>
+      <div class="activities-grid">
+        <a href="activity-detail.html?id=2" class="activity-card">
+          <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80')"></div>
+          <div class="activity-body"><span class="activity-tag">Sensibilisation</span><h4>Journée Portes Ouvertes</h4><p>Rencontre avec nos équipes pour briser les tabous autour de la santé mentale.</p><span class="activity-date">10 Déc 2024 · Pétion-Ville</span></div>
+        </a>
+        <a href="activity-detail.html?id=3" class="activity-card">
+          <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80')"></div>
+          <div class="activity-body"><span class="activity-tag">Formation</span><h4>Formation des Agents de Santé</h4><p>Formation de première ligne pour les travailleurs communautaires.</p><span class="activity-date">5 Nov 2024 · Jacmel</span></div>
+        </a>
+        <a href="activity-detail.html?id=5" class="activity-card">
+          <div class="activity-img" style="background-image:url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=600&q=80')"></div>
+          <div class="activity-body"><span class="activity-tag">Atelier</span><h4>Art-Thérapie et Expression</h4><p>L'art comme outil de guérison — atelier ouvert à tous.</p><span class="activity-date">8 Sep 2024 · Cap-Haïtien</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p>Centre d'Appui Psychologique et Social.</p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="activities.html">Activités</a></li><li><a href="appointments.html">Rendez-vous</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul><li><a href="appointments.html">Consultation psychologique</a></li><li><a href="appointments.html">Travail social</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer">❤ Faire un don</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 CAPSY. Tous droits réservés.</p><div class="lang-switcher"><button class="lang-btn active">FR</button><button class="lang-btn">HT</button><button class="lang-btn">EN</button></div></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const activities = {
+      1: {
+        tag: 'Atelier',
+        title: 'Résilience et Santé Mentale',
+        date: '15 Janvier 2025',
+        location: 'Port-au-Prince, Haïti',
+        duration: 'Journée complète (8h–17h)',
+        img: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&q=85',
+        description: `<p>Cet atelier communautaire a réuni plus de 80 participants pour explorer ensemble les outils de résilience face aux traumatismes collectifs et individuels vécus en Haïti.</p>
+        <p>Animé par notre équipe de psychologues et de travailleurs sociaux, il a abordé des thèmes comme la gestion du stress post-traumatique, les techniques de régulation émotionnelle, et les ressources communautaires disponibles.</p>
+        <p>Les participants ont pu expérimenter des exercices pratiques de pleine conscience, de respiration, et de groupe de parole dans un cadre sûr et bienveillant.</p>`,
+        hasAppt: true
+      },
+      2: {
+        tag: 'Sensibilisation',
+        title: 'Journée Portes Ouvertes',
+        date: '10 Décembre 2024',
+        location: 'Pétion-Ville, Haïti',
+        duration: '10h–16h',
+        img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=85',
+        description: `<p>La Journée Portes Ouvertes de CAPSY a accueilli plus de 150 visiteurs désireux d'en apprendre davantage sur nos services et sur la santé mentale en général.</p>
+        <p>L'événement visait à briser les tabous culturels entourant la santé mentale en Haïti, en offrant un espace de dialogue ouvert avec nos professionnels.</p>
+        <p>Des mini-consultations gratuites, des expositions interactives, et des témoignages de clients (avec leur accord) ont marqué cette journée mémorable.</p>`,
+        hasAppt: false
+      },
+      3: {
+        tag: 'Formation',
+        title: 'Formation des Agents de Santé',
+        date: '5 Novembre 2024',
+        location: 'Jacmel, Haïti',
+        duration: '3 jours (3–5 Nov)',
+        img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=85',
+        description: `<p>Cette formation intensive de trois jours a certifié 35 agents de santé communautaire en premiers secours psychologiques (PSP).</p>
+        <p>Les participants, issus de différentes communes du Sud, ont appris à identifier les signes de détresse mentale, à offrir un soutien de première ligne, et à orienter les personnes vers des professionnels.</p>
+        <p>Cette formation s'inscrit dans notre mission d'étendre l'accès aux soins psychologiques dans les zones rurales d'Haïti.</p>`,
+        hasAppt: false
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || '1';
+    const act = activities[id] || activities[1];
+
+    document.title = act.title + ' – CAPSY';
+
+    document.getElementById('detailContent').innerHTML = `
+      <div class="detail-main">
+        <img src="${act.img}" alt="${act.title}" class="detail-img" />
+        <span class="activity-tag">${act.tag}</span>
+        <h1 style="margin:16px 0 24px;font-size:clamp(2rem,4vw,3rem)">${act.title}</h1>
+        <div style="font-size:.9rem;color:var(--text-md);line-height:1.8">${act.description}</div>
+      </div>
+      <div class="detail-sidebar">
+        <h4 style="margin-bottom:20px">Détails de l'activité</h4>
+        <div class="detail-meta">
+          <div class="detail-meta-item"><span class="detail-meta-icon">📅</span><div><strong>Date</strong><p>${act.date}</p></div></div>
+          <div class="detail-meta-item"><span class="detail-meta-icon">📍</span><div><strong>Lieu</strong><p>${act.location}</p></div></div>
+          <div class="detail-meta-item"><span class="detail-meta-icon">⏱</span><div><strong>Durée</strong><p>${act.duration}</p></div></div>
+          <div class="detail-meta-item"><span class="detail-meta-icon">🏷</span><div><strong>Catégorie</strong><p>${act.tag}</p></div></div>
+        </div>
+        ${act.hasAppt ? `<a href="appointments.html" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:12px">Prendre un rendez-vous lié</a>` : ''}
+        <a href="activities.html" class="btn-outline" style="width:100%;justify-content:center">← Toutes les activités</a>
+      </div>`;
+  </script>
+</body>
+</html>

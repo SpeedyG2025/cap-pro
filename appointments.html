@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rendez-vous – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="activities.html">Activités</a></li>
+        <li><a href="appointments.html" class="active">Rendez-vous</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-donate-nav">Faire un don</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-tag">Prise de Rendez-vous</p>
+      <h1>Réservez votre consultation</h1>
+      <p>Choisissez le type de professionnel, sélectionnez vos disponibilités, et réglez en ligne en toute sécurité.</p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="appt-grid">
+        <!-- FORM -->
+        <div>
+          <h3 style="margin-bottom:28px">Votre demande de consultation</h3>
+
+          <!-- Step 1: Type -->
+          <div style="margin-bottom:32px">
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px">1. Type de professionnel</p>
+            <div class="type-selector">
+              <div class="type-card selected" data-type="psychologue">
+                <div class="type-icon">🧠</div>
+                <strong>Psychologue</strong>
+                <span>Thérapie individuelle</span>
+              </div>
+              <div class="type-card" data-type="social">
+                <div class="type-icon">🤝</div>
+                <strong>Travailleur Social</strong>
+                <span>Soutien & accompagnement</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="apptForm">
+            <!-- Step 2: Info -->
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px">2. Vos informations</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Prénom *</label>
+                <input type="text" placeholder="Marie-Josée" required />
+              </div>
+              <div class="form-group">
+                <label>Nom de famille *</label>
+                <input type="text" placeholder="Tremblay" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label>Téléphone *</label>
+                <input type="tel" placeholder="+509 XXXX XXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Motif de la consultation</label>
+              <textarea placeholder="Décrivez brièvement la raison de votre consultation (optionnel — tout reste confidentiel)..."></textarea>
+            </div>
+
+            <!-- Step 3: Date -->
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px">3. Date &amp; heure</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Date souhaitée *</label>
+                <input type="date" id="apptDate" required />
+              </div>
+              <div class="form-group">
+                <label>Heure préférée *</label>
+                <select required>
+                  <option value="">Choisir un créneau</option>
+                  <option>08h00 – 09h00</option>
+                  <option>09h00 – 10h00</option>
+                  <option>10h00 – 11h00</option>
+                  <option>11h00 – 12h00</option>
+                  <option>14h00 – 15h00</option>
+                  <option>15h00 – 16h00</option>
+                  <option>16h00 – 17h00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Mode de consultation</label>
+              <select>
+                <option>En présentiel (Port-au-Prince)</option>
+                <option>En ligne (vidéo)</option>
+                <option>Par téléphone</option>
+              </select>
+            </div>
+
+            <!-- Step 4: Payment -->
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px">4. Paiement de la consultation</p>
+
+            <div class="price-tag">
+              <span>1,500 HTG</span>
+              <span>par séance (≈ $11 USD)</span>
+            </div>
+
+            <div class="payment-methods">
+              <button type="button" class="pay-method selected">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span>Carte bancaire</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                <span>MonCash</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                <span>Digicel Cash</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Sur place</span>
+              </button>
+            </div>
+
+            <div id="cardFields">
+              <div class="form-group">
+                <label>Numéro de carte</label>
+                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Date d'expiration</label>
+                  <input type="text" placeholder="MM/AA" maxlength="5" />
+                </div>
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input type="text" placeholder="123" maxlength="4" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px">
+              Confirmer et payer le rendez-vous
+            </button>
+
+            <p style="font-size:.75rem;color:var(--text-lt);text-align:center;margin-top:12px">
+              🔒 Paiement sécurisé · Remboursable jusqu'à 24h avant la séance · Confidentiel
+            </p>
+          </form>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <div>
+          <div class="detail-sidebar" style="margin-bottom:24px">
+            <h4 style="margin-bottom:20px">Ce qui vous attend</h4>
+            <div style="display:flex;flex-direction:column;gap:18px">
+              <div style="display:flex;gap:14px">
+                <span style="font-size:1.4rem">🔐</span>
+                <div>
+                  <strong style="display:block;font-size:.875rem;margin-bottom:3px">Espace confidentiel</strong>
+                  <p style="font-size:.82rem;color:var(--text-md)">Toutes les séances sont protégées par le secret professionnel.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px">
+                <span style="font-size:1.4rem">🌍</span>
+                <div>
+                  <strong style="display:block;font-size:.875rem;margin-bottom:3px">Ancré dans la culture</strong>
+                  <p style="font-size:.82rem;color:var(--text-md)">Nos professionnels comprennent la réalité haïtienne.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px">
+                <span style="font-size:1.4rem">📱</span>
+                <div>
+                  <strong style="display:block;font-size:.875rem;margin-bottom:3px">Flexible &amp; accessible</strong>
+                  <p style="font-size:.82rem;color:var(--text-md)">Consultations en présentiel, vidéo, ou téléphone.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:14px">
+                <span style="font-size:1.4rem">💚</span>
+                <div>
+                  <strong style="display:block;font-size:.875rem;margin-bottom:3px">Tarifs accessibles</strong>
+                  <p style="font-size:.82rem;color:var(--text-md)">Réductions disponibles pour les personnes dans le besoin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-sidebar" style="background:var(--navy);border-color:var(--navy);color:#fff">
+            <h4 style="color:#fff;margin-bottom:12px">Besoin d'une aide urgente?</h4>
+            <p style="font-size:.875rem;color:rgba(255,255,255,.75);margin-bottom:20px">Si vous traversez une crise, appelez-nous directement ou envoyez un message d'urgence.</p>
+            <a href="tel:+50900000000" class="btn-primary" style="display:flex;justify-content:center;background:var(--gold);color:var(--navy)">📞 Ligne d'urgence</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p>Centre d'Appui Psychologique et Social.</p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Accueil</a></li><li><a href="activities.html">Activités</a></li><li><a href="appointments.html">Rendez-vous</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul><li><a href="appointments.html">Consultation psychologique</a></li><li><a href="appointments.html">Travail social</a></li><li><a href="activities.html">Ateliers collectifs</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer">❤ Faire un don</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 CAPSY. Tous droits réservés.</p><div class="lang-switcher"><button class="lang-btn active">FR</button><button class="lang-btn">HT</button><button class="lang-btn">EN</button></div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    // Set min date to today
+    const dateInput = document.getElementById('apptDate');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+    // Card number formatting
+    const cardNum = document.querySelector('input[placeholder="1234 5678 9012 3456"]');
+    if (cardNum) {
+      cardNum.addEventListener('input', e => {
+        let v = e.target.value.replace(/\D/g, '').substring(0, 16);
+        e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
+      });
+    }
+    // Expiry formatting
+    const expiry = document.querySelector('input[placeholder="MM/AA"]');
+    if (expiry) {
+      expiry.addEventListener('input', e => {
+        let v = e.target.value.replace(/\D/g, '').substring(0, 4);
+        if (v.length >= 3) v = v.substring(0,2) + '/' + v.substring(2);
+        e.target.value = v;
+      });
+    }
+  </script>
+</body>
+</html>
